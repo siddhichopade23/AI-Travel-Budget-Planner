@@ -90,4 +90,11 @@ document.getElementById("destinationImage").innerHTML =
             <p>${tips}</p>
         </div>
     `;
+    let mapLink = "https://www.google.com/maps/search/" + encodeURIComponent(destination);
+
+document.getElementById("mapButton").innerHTML = `
+<a href="${mapLink}" target="_blank">
+📍 View ${destination} on Google Maps
+</a>
+`;
 }
