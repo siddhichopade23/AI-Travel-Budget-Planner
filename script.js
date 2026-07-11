@@ -47,6 +47,23 @@ function generatePlan() {
     }
 
     document.getElementById("result").style.display = "block";
+    let image = "";
+
+if(destination.toLowerCase() === "goa"){
+    image = "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800";
+}
+else if(destination.toLowerCase() === "manali"){
+    image = "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800";
+}
+else if(destination.toLowerCase() === "mumbai"){
+    image = "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800";
+}
+else{
+    image = "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800";
+}
+
+document.getElementById("destinationImage").innerHTML =
+`<img src="${image}" alt="${destination}">`;
 
     document.getElementById("itinerary").innerHTML = `
         <div class="card">
