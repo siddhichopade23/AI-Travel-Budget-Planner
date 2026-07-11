@@ -1,76 +1,76 @@
-const API_KEY = "AQ.Ab8RN6JAlysoJCyKO7YbreP3h6Fpd5tac5bwm24jfkUMJ_MHNw";
+function generatePlan() {
 
-async function generatePlan() {
+    let destination = document.getElementById("destination").value;
+    let days = document.getElementById("days").value;
+    let budget = document.getElementById("budget").value;
+    let style = document.getElementById("style").value;
 
-    const destination = document.getElementById("destination").value;
-    const days = document.getElementById("days").value;
-    const budget = document.getElementById("budget").value;
-    const style = document.getElementById("style").value;
-
-    const prompt = `
-Create a travel plan for:
-
-Destination: ${destination}
-Days: ${days}
-Budget: ₹${budget}
-Travel Style: ${style}
-
-Give the response in this format:
-
-1. Day-wise itinerary
-
-2. Estimated expenses
-
-3. Packing checklist
-
-4. Travel tips
-`;
-
-    const url =
-`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
-
-    const body = {
-        contents: [
-            {
-                parts: [
-                    {
-                        text: prompt
-                    }
-                ]
-            }
-        ]
-    };
-
-    try {
-
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type":"application/json"
-            },
-            body: JSON.stringify(body)
-        });
-
-        const data = await response.json();
-
-        const output =
-data.candidates[0].content.parts[0].text;
-
-        document.getElementById("result").style.display = "block";
-
-        document.getElementById("itinerary").innerHTML =
-        "<div class='card'><h3>AI Travel Plan</h3><p>" +
-        output.replace(/\n/g,"<br>") +
-        "</p></div>";
-
+    if (destination === "" || days === "" || budget === "") {
+        alert("Please fill all the fields.");
+        return;
     }
 
-    catch(error){
+    let hotel = Math.round(budget * 0.4);
+    let food = Math.round(budget * 0.3);
+    let transport = Math.round(budget * 0.2);
+    let shopping = Math.round(budget * 0.1);
 
-        alert("Something went wrong!");
+    let itinerary = "";
 
-        console.log(error);
-
+    for (let i = 1; i <= days; i++) {
+        itinerary += `<p><strong>Day ${i}:</strong> Explore famous attractions in ${destination}, enjoy local food, and experience the culture.</p>`;
     }
 
+    let packing = `
+    <ul>
+        <li>Passport / ID Card</li>
+        <li>Clothes</li>
+        <li>Power Bank</li>
+        <li>Phone Charger</li>
+        <li>Medicines</li>
+        <li>Water Bottle</li>
+        <li>Umbrella</li>
+        <li>Comfortable Shoes</li>
+    </ul>
+    `;
+
+    let tips = "";
+
+    if (style === "Budget") {
+        tips = "Choose public transport, book hostels, and eat at local restaurants to save money.";
+    }
+    else if (style === "Standard") {
+        tips = "Book mid-range hotels, use ride-sharing apps, and explore popular attractions.";
+    }
+    else {
+        tips = "Enjoy premium hotels, private transport, and luxury dining experiences.";
+    }
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("itinerary").innerHTML = `
+        <div class="card">
+            <h3>🗓 Travel Itinerary</h3>
+            ${itinerary}
+        </div>
+    `;
+
+    document.getElementById("expenses").innerHTML = `
+        <div class="card">
+            <h3>💰 Estimated Budget</h3>
+            <p>🏨 Hotel: ₹${hotel}</p>
+            <p>🍽 Food: ₹${food}</p>
+            <p>🚌 Transport: ₹${transport}</p>
+            <p>🛍 Shopping & Others: ₹${shopping}</p>
+        </div>
+    `;
+
+    document.getElementById("packing").innerHTML = `
+        <div class="card">
+            <h3>🎒 Packing Checklist</h3>
+            ${packing}
+            <h3>💡 Travel Tips</h3>
+            <p>${tips}</p>
+        </div>
+    `;
 }
