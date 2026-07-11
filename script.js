@@ -49,13 +49,13 @@ function generatePlan() {
     document.getElementById("result").style.display = "block";
     let image = "";
 
-if(destination.toLowerCase() === "goa"){
+if(destination.toLowerCase().includes("goa")){
     image = "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800";
 }
-else if(destination.toLowerCase() === "manali"){
+else if(destination.toLowerCase().includes("manali")){
     image = "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800";
 }
-else if(destination.toLowerCase() === "mumbai"){
+else if(destination.toLowerCase().includes("mumbai")){
     image = "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800";
 }
 else{
