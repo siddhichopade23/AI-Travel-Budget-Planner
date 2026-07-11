@@ -65,6 +65,81 @@ else if (destination.toLowerCase().includes("manali")) {
 
 }
 
+else if (destination.toLowerCase().includes("pune")) {
+
+    let places = [
+        "🏰 Visit Shaniwar Wada",
+        "🌄 Explore Sinhagad Fort",
+        "🛕 Visit Dagdusheth Halwai Ganpati Temple",
+        "🛍️ Shop on FC Road",
+        "🌿 Relax at Pashan Lake"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
+    }
+
+}
+else if (destination.toLowerCase().includes("jaipur")) {
+
+    let places = [
+        "🏰 Visit Amber Fort",
+        "🌸 Explore Hawa Mahal",
+        "👑 Visit City Palace",
+        "🌞 Explore Jantar Mantar",
+        "🛍️ Shop at Bapu Bazaar"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
+    }
+
+}
+else if (destination.toLowerCase().includes("agra")) {
+
+    let places = [
+        "🕌 Visit the Taj Mahal",
+        "🏰 Explore Agra Fort",
+        "🌅 Visit Mehtab Bagh",
+        "🛍️ Shop for marble handicrafts",
+        "🍽️ Try Agra's famous petha"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
+    }
+
+}
+else if (destination.toLowerCase().includes("ooty")) {
+
+    let places = [
+        "🚂 Ride the Nilgiri Mountain Railway",
+        "🌺 Visit the Botanical Garden",
+        "🚣 Enjoy Ooty Lake",
+        "🌄 Explore Doddabetta Peak",
+        "🍫 Visit a local chocolate factory"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
+    }
+
+}
+else if (destination.toLowerCase().includes("shimla")) {
+
+    let places = [
+        "🚶 Walk on Mall Road",
+        "🏛️ Visit Christ Church",
+        "🚡 Enjoy the Jakhoo Ropeway",
+        "🌲 Explore Kufri",
+        "📸 Visit The Ridge"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
+    }
+
+}
 else {
 
     for (let i = 1; i <= days; i++) {
