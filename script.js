@@ -97,4 +97,25 @@ document.getElementById("mapButton").innerHTML = `
 📍 View ${destination} on Google Maps
 </a>
 `;
+    let weather = "";
+
+if(destination.toLowerCase() === "goa"){
+    weather = "☀️ Hot and humid. Carry sunscreen, sunglasses and light cotton clothes.";
+}
+else if(destination.toLowerCase() === "manali"){
+    weather = "❄️ Cold weather. Carry warm jackets, gloves and woollen clothes.";
+}
+else if(destination.toLowerCase() === "mumbai"){
+    weather = "🌧️ Rain is possible. Carry an umbrella and waterproof footwear.";
+}
+else{
+    weather = "🌤️ Check the local weather forecast before your trip.";
+}
+
+document.getElementById("weather").innerHTML = `
+<div class="weather-card">
+<h3>🌤️ Weather Suggestion</h3>
+<p>${weather}</p>
+</div>
+`;
 }
