@@ -151,17 +151,24 @@ else {
 }
 
     let packing = `
-    <ul>
-        <li>Passport / ID Card</li>
-        <li>Clothes</li>
-        <li>Power Bank</li>
-        <li>Phone Charger</li>
-        <li>Medicines</li>
-        <li>Water Bottle</li>
-        <li>Umbrella</li>
-        <li>Comfortable Shoes</li>
-    </ul>
-    `;
+<ul>
+    <li>🪪 Passport / ID Card</li>
+    <li>👕 Comfortable Clothes</li>
+    <li>🔋 Power Bank</li>
+    <li>📱 Phone Charger</li>
+    <li>💊 Medicines</li>
+    <li>💧 Water Bottle</li>
+    <li>☂️ Umbrella</li>
+    <li>👟 Comfortable Shoes</li>
+</ul>
+`;
+
+if(destination.toLowerCase().includes("goa")){
+    packing += "<p>🏖️ Carry sunscreen, sunglasses and beachwear.</p>";
+}
+else if(destination.toLowerCase().includes("manali") || destination.toLowerCase().includes("shimla")){
+    packing += "<p>🧥 Carry warm clothes, gloves and woollen socks.</p>";
+}
 
     let tips = "";
 
@@ -364,10 +371,16 @@ else if(destination.toLowerCase() === "manali"){
 }
 else{
     foodSuggestions = `
-    <p>Try the famous local cuisine of your destination.</p>
+    else{
+    foodSuggestions = `
+    <ul>
+        <li>🍽️ Try the local street food.</li>
+        <li>🥘 Taste the region's traditional dishes.</li>
+        <li>☕ Visit a popular local café.</li>
+    </ul>
     `;
 }
-
+    
 document.getElementById("food").innerHTML = `
 <div class="food-card">
 <h3>🍽️ Local Food to Try</h3>
