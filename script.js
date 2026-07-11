@@ -14,6 +14,8 @@ function generatePlan() {
     let food = Math.round(budget * 0.3);
     let transport = Math.round(budget * 0.2);
     let shopping = Math.round(budget * 0.1);
+    let spent = hotel + food + transport + shopping;
+let percentage = (spent / budget) * 100;
 
     let itinerary = "";
 
@@ -208,6 +210,20 @@ document.getElementById("destinationImage").innerHTML =
             <p>🛍 Shopping & Others: ₹${shopping}</p>
         </div>
     `;
+    document.getElementById("budgetBar").innerHTML = `
+<div class="card">
+<h3>📊 Budget Usage</h3>
+
+<div class="bar">
+<div class="fill" style="width:${percentage}%">
+${Math.round(percentage)}%
+</div>
+</div>
+
+<p>Total Planned Budget: ₹${spent}</p>
+
+</div>
+`;
 
     document.getElementById("packing").innerHTML = `
         <div class="card">
