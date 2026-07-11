@@ -154,5 +154,46 @@ document.getElementById("hotels").innerHTML = `
 <h3>🏨 Suggested Hotels</h3>
 ${hotels}
 </div>
-}
 `;
+    let food = "";
+
+if(destination.toLowerCase() === "goa"){
+    food = `
+    <ul>
+        <li>🐟 Goan Fish Curry</li>
+        <li>🍰 Bebinca</li>
+        <li>🍤 Prawn Balchão</li>
+    </ul>
+    `;
+}
+else if(destination.toLowerCase() === "mumbai"){
+    food = `
+    <ul>
+        <li>🥪 Vada Pav</li>
+        <li>🥘 Pav Bhaji</li>
+        <li>🍛 Misal Pav</li>
+    </ul>
+    `;
+}
+else if(destination.toLowerCase() === "manali"){
+    food = `
+    <ul>
+        <li>🥟 Siddu</li>
+        <li>🍜 Thukpa</li>
+        <li>🥣 Madra</li>
+    </ul>
+    `;
+}
+else{
+    food = `
+    <p>Try the famous local cuisine of your destination.</p>
+    `;
+}
+
+document.getElementById("food").innerHTML = `
+<div class="food-card">
+<h3>🍽️ Local Food to Try</h3>
+${food}
+</div>
+`;
+}
