@@ -28,6 +28,13 @@ The application then generates:
 
 This project is useful for students, families, solo travelers, and anyone planning a vacation.
 
+Project Structure
+AI-Travel-Budget-Planner/
+│── index.html
+│── style.css
+│── script.js
+│── README.md
+
 ## Data Sources and AI Methods
 
 Currently, the application uses user inputs and JavaScript logic to generate travel recommendations.
