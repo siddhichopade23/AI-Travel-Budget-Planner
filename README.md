@@ -4,11 +4,13 @@
 
 ## Summary
 
-AI Travel Budget Planner is an AI-powered application that helps users plan trips based on their destination, travel budget, number of days, and travel style. It generates a personalized itinerary, estimates travel expenses, creates a packing checklist, and provides a budget breakdown to make travel planning easier and more organized.
+AI Travel Budget Planner is a smart travel planning application that helps users create a personalized travel plan based on their destination, budget, travel duration, and travel style. The project demonstrates how AI can assist in travel planning by providing itinerary suggestions, budget estimation, packing checklists, and travel tips.
 
 ## Background
 
-Planning a trip can be time-consuming and confusing, especially when trying to stay within a budget. Many travelers spend hours researching destinations, estimating costs, and deciding what to pack. This project aims to simplify the entire planning process using AI by generating personalized travel plans in just a few clicks.
+Planning a trip often requires researching destinations, estimating expenses, deciding what to pack, and organizing daily activities. This process can be time-consuming and overwhelming.
+
+This project aims to simplify travel planning by generating a structured travel plan based on user preferences. In a future version, an AI model such as Google Gemini could generate highly personalized recommendations.
 
 ## How is it used?
 
@@ -18,36 +20,44 @@ The user enters:
 - Number of travel days
 - Travel style (Budget, Standard, or Luxury)
 
-The AI then provides:
-- A suggested travel itinerary
-- Estimated expenses
-- A packing checklist
-- A budget summary
+The application then generates:
+- A day-wise travel itinerary
+- Estimated budget breakdown
+- Packing checklist
+- Personalized travel tips
 
-This application is useful for students, families, solo travelers, and anyone planning a trip.
+This project is useful for students, families, solo travelers, and anyone planning a vacation.
 
 ## Data Sources and AI Methods
 
-The project uses user inputs such as destination, budget, travel duration, and travel style. Future versions can integrate AI models like Gemini or OpenAI to generate personalized itineraries and travel recommendations.
+Currently, the application uses user inputs and JavaScript logic to generate travel recommendations.
+
+Future versions can integrate AI models such as Google Gemini or OpenAI to:
+- Generate personalized itineraries
+- Recommend attractions
+- Suggest restaurants
+- Optimize travel budgets
+- Provide real-time travel advice
 
 ## Challenges
 
-This project does not currently include:
-- Real-time flight prices
-- Live hotel availability
-- Weather forecasts
-- Traffic conditions
+This project currently does not include:
+- Live weather information
+- Flight booking integration
+- Hotel availability
+- Real-time pricing
+- Traffic information
 
-These features can be added in future versions using external APIs.
+These features can be added using external APIs in future versions.
 
 ## Future Improvements
 
-- Real-time weather integration
-- Hotel recommendations
-- Flight price prediction
+- AI-generated personalized itineraries
+- Weather forecast integration
+- Flight and hotel recommendations
 - Currency converter
-- Interactive travel map
-- AI chatbot for travel assistance
+- Interactive maps
+- Voice-based travel assistant
 
 ## Technologies Used
 
@@ -55,10 +65,7 @@ These features can be added in future versions using external APIs.
 - CSS
 - JavaScript
 - GitHub
-- AI (Future API Integration)
 
 ## Author
 
 **Siddhi Chopade**
-
-Building AI course project
