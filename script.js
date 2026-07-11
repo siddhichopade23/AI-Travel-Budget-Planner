@@ -118,4 +118,41 @@ document.getElementById("weather").innerHTML = `
 <p>${weather}</p>
 </div>
 `;
+
+let hotels = "";
+
+if(style === "Budget"){
+    hotels = `
+    <ul>
+        <li>Zostel</li>
+        <li>Backpacker Hostel</li>
+        <li>Budget Inn</li>
+    </ul>
+    `;
 }
+else if(style === "Standard"){
+    hotels = `
+    <ul>
+        <li>Treebo Hotels</li>
+        <li>FabHotel</li>
+        <li>Ginger Hotel</li>
+    </ul>
+    `;
+}
+else{
+    hotels = `
+    <ul>
+        <li>Taj Hotel</li>
+        <li>The Oberoi</li>
+        <li>ITC Hotels</li>
+    </ul>
+    `;
+}
+
+document.getElementById("hotels").innerHTML = `
+<div class="hotel-card">
+<h3>🏨 Suggested Hotels</h3>
+${hotels}
+</div>
+}
+`;
