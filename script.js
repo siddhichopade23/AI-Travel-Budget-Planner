@@ -17,9 +17,61 @@ function generatePlan() {
 
     let itinerary = "";
 
-    for (let i = 1; i <= days; i++) {
-        itinerary += `<p><strong>Day ${i}:</strong> Explore famous attractions in ${destination}, enjoy local food, and experience the culture.</p>`;
+if (destination.toLowerCase().includes("goa")) {
+
+    let places = [
+        "🏖️ Visit Baga Beach and Calangute Beach",
+        "🏰 Explore Fort Aguada and Candolim Beach",
+        "🌊 Visit Dudhsagar Falls and local markets",
+        "⛪ Explore Basilica of Bom Jesus",
+        "🌅 Enjoy a sunset cruise on the Mandovi River"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
     }
+
+}
+
+else if (destination.toLowerCase().includes("mumbai")) {
+
+    let places = [
+        "🕌 Visit Gateway of India and Colaba Causeway",
+        "🌊 Walk along Marine Drive and Chowpatty Beach",
+        "🏝️ Explore Elephanta Caves",
+        "🎬 Visit Bandra and Bandstand",
+        "🛍️ Shop at Linking Road"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
+    }
+
+}
+
+else if (destination.toLowerCase().includes("manali")) {
+
+    let places = [
+        "🏔️ Visit Hadimba Temple",
+        "❄️ Explore Solang Valley",
+        "🚠 Visit Rohtang Pass",
+        "🛍️ Shop at Mall Road",
+        "🌲 Relax in Old Manali"
+    ];
+
+    for (let i = 0; i < days && i < places.length; i++) {
+        itinerary += `<p><strong>Day ${i + 1}:</strong> ${places[i]}</p>`;
+    }
+
+}
+
+else {
+
+    for (let i = 1; i <= days; i++) {
+        itinerary += `<p><strong>Day ${i}:</strong> Explore famous attractions in ${destination}, enjoy local food and experience the local culture.</p>`;
+    }
+
+}
 
     let packing = `
     <ul>
