@@ -108,3 +108,20 @@ button:hover {
     border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
+#mapButton{
+    text-align:center;
+    margin-top:20px;
+}
+
+#mapButton a{
+    background:#28a745;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+#mapButton a:hover{
+    background:#218838;
+}
