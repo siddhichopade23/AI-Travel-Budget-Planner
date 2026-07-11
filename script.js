@@ -332,10 +332,10 @@ document.getElementById("hotels").innerHTML = `
 ${hotels}
 </div>
 `;
-    let food = "";
+    let foodSuggestions = "";
 
 if(destination.toLowerCase() === "goa"){
-    food = `
+    foodSuggestions = `
     <ul>
         <li>🐟 Goan Fish Curry</li>
         <li>🍰 Bebinca</li>
@@ -344,7 +344,7 @@ if(destination.toLowerCase() === "goa"){
     `;
 }
 else if(destination.toLowerCase() === "mumbai"){
-    food = `
+    foodSuggestions = `
     <ul>
         <li>🥪 Vada Pav</li>
         <li>🥘 Pav Bhaji</li>
@@ -353,7 +353,7 @@ else if(destination.toLowerCase() === "mumbai"){
     `;
 }
 else if(destination.toLowerCase() === "manali"){
-    food = `
+    foodSuggestions = `
     <ul>
         <li>🥟 Siddu</li>
         <li>🍜 Thukpa</li>
@@ -362,7 +362,7 @@ else if(destination.toLowerCase() === "manali"){
     `;
 }
 else{
-    food = `
+    foodSuggestions = `
     <p>Try the famous local cuisine of your destination.</p>
     `;
 }
