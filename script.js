@@ -286,7 +286,8 @@ else if(destination.toLowerCase() === "mumbai"){
     weather = "🌧️ Rain is possible. Carry an umbrella and waterproof footwear.";
 }
 else{
-    weather = "🌤️ Check the local weather forecast before your trip.";
+    weather = "🌤️ Weather information is unavailable for this destination. Please check the local weather forecast and pack accordingly.";
+
 }
 
 document.getElementById("weather").innerHTML = `
