@@ -224,6 +224,40 @@ ${Math.round(percentage)}%
 
 </div>
 `;
+    let convertedAmount = "";
+let currencyName = "";
+
+if(destination.toLowerCase().includes("usa")){
+    convertedAmount = (budget / 86).toFixed(2);
+    currencyName = "USD ($)";
+}
+else if(destination.toLowerCase().includes("uk")){
+    convertedAmount = (budget / 117).toFixed(2);
+    currencyName = "GBP (£)";
+}
+else if(destination.toLowerCase().includes("europe")){
+    convertedAmount = (budget / 101).toFixed(2);
+    currencyName = "EUR (€)";
+}
+else if(destination.toLowerCase().includes("japan")){
+    convertedAmount = (budget * 1.7).toFixed(2);
+    currencyName = "JPY (¥)";
+}
+else{
+    convertedAmount = budget;
+    currencyName = "INR (₹)";
+}
+
+document.getElementById("currency").innerHTML = `
+<div class="currency-card">
+<h3>💱 Currency Conversion</h3>
+
+<p>
+Budget in ${currencyName}: <strong>${convertedAmount}</strong>
+</p>
+
+</div>
+`;
 
     document.getElementById("packing").innerHTML = `
         <div class="card">
