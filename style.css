@@ -176,4 +176,14 @@ button:hover {
     line-height:25px;
     font-weight:bold;
 }
+#currency{
+    margin-top:20px;
+}
+
+.currency-card{
+    background:#e8f5e9;
+    padding:15px;
+    border-radius:10px;
+    border-left:5px solid green;
+}
 
