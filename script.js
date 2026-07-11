@@ -373,4 +373,31 @@ document.getElementById("food").innerHTML = `
 ${food}
 </div>
 `;
+    document.getElementById("download").innerHTML = `
+<button onclick="downloadPlan()">📄 Download Travel Plan</button>
+`;
+}
+function downloadPlan(){
+
+    let text =
+`AI Travel Budget Planner
+
+Destination: ${document.getElementById("destination").value}
+
+Days: ${document.getElementById("days").value}
+
+Budget: ₹${document.getElementById("budget").value}
+
+Generated successfully!`;
+
+    let blob = new Blob([text], {type:"text/plain"});
+
+    let link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+
+    link.download = "TravelPlan.txt";
+
+    link.click();
+
 }
