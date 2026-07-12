@@ -371,8 +371,6 @@ else if(destination.toLowerCase() === "manali"){
 }
 else{
     foodSuggestions = `
-    else{
-    foodSuggestions = `
     <ul>
         <li>🍽️ Try the local street food.</li>
         <li>🥘 Taste the region's traditional dishes.</li>
@@ -384,7 +382,7 @@ else{
 document.getElementById("food").innerHTML = `
 <div class="food-card">
 <h3>🍽️ Local Food to Try</h3>
-${food}
+${foodSuggestions}
 </div>
 `;
     document.getElementById("download").innerHTML = `
